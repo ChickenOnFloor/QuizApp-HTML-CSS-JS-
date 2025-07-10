@@ -4,7 +4,7 @@ function getData() {
   return fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple')
     .then(response => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        console.error('Network response was not ok');
       }
       return response.json();
     })
