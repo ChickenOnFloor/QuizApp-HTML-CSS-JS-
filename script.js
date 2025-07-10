@@ -4,7 +4,7 @@ function getData() {
   return fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple')
     .then(response => {
       if (!response.ok) {
-        console.error('Network response was not ok');
+        console.error('Unable to fetch data');
       }
       return response.json();
     })
@@ -20,9 +20,6 @@ function getData() {
       });
       showQuestion();
     })
-    .catch(error => {
-      console.error('There has been a problem with your fetch operation:', error);
-    });
 }
 
 
